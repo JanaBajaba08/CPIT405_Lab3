@@ -95,7 +95,7 @@ nav a:hover {
   margin: 8px 0;
 }
 
-/* Contact */
+/*Contact*/
 #contact p {
   margin: 8px 0;
 }
@@ -105,13 +105,24 @@ nav a:hover {
   text-decoration: none;
 }
 
+#contact a:visited {
+  color: #4c639d;
+}
+
 #contact a:hover {
+  color: #13073d;
   text-decoration: underline;
 }
 
 /*Footer*/
 footer {
+  width: 100%;
   text-align: center;
-  padding: 15px;
+  padding: 15px 0;
   color: #13073d;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
 }
