@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My CV</title>
+    <title>Jana Bajaba | CV</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
     <header id="profile-header">
       <h1>Jana Bajaba</h1>
       <p class="job-title">Senior Information Technology Student</p>
+      <button id="themeBtn" class="action-btn" type="button">Dark Mode</button>
 
       <nav>
         <a href="#about">About</a>
@@ -30,6 +32,11 @@
           about problem-solving, learning new technologies, and applying them in
           real projects.
         </p>
+        <p id="extraAbout" hidden>
+          My technical interests include Java programming, database design,
+          prototyping, and user-centered design.
+        </p>
+        <button id="aboutBtn" class="action-btn" type="button">Show More</button>
       </section>
 
       <section id="education" class="cv-section">
@@ -81,31 +88,12 @@
 
       <section id="projects" class="cv-section">
         <h2>Projects</h2>
-        <article class="project-card">
-          <h3>Order Management and Tracking System</h3>
-          <p>
-            Developed a Java-based system for managing service orders, statuses,
-            notifications, and customer feedback.
-          </p>
-          <p>
-            <strong>Applied:</strong> UML and ER diagram design, Java
-            programming, unit testing, and Agile software development using
-            Extreme Programming (XP).
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Recommendation and Booking System</h3>
-          <p>
-            Developed a Java-based backend system that provides users with
-            relevant recommendations and supports a smooth booking process.
-          </p>
-          <p>
-            <strong>Applied:</strong> Object-Oriented Programming, database
-            connection, multithreading, API integration, exception handling, and
-            Git version control.
-          </p>
-        </article>
+        <div class="project-filters">
+          <button type="button" class="filter-btn active" data-category="All">All</button>
+          <button type="button" class="filter-btn" data-category="Web">Web</button>
+          <button type="button" class="filter-btn" data-category="Programming">Programming</button>
+        </div>
+        <div id="projectsContainer"></div>
       </section>
 
       <section id="contact" class="cv-section">
@@ -139,6 +127,9 @@
 
         <p>Location: Jeddah, Saudi Arabia</p>
       </section>
+      <div class="print-container">
+        <button id="printBtn" class="action-btn" type="button">Print / Save as PDF</button>
+      </div>
     </main>
 
     <footer>
